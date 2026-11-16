@@ -409,3 +409,17 @@ figure.quote figcaption { margin-top: 10px; font: 400 14px var(--font-body); col
 /* Fotos del equipo */
 .avatar { overflow: hidden; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+
+/* Botón para probar la app con el APK (página de descarga del equipo) */
+.btn-apk { background: var(--jade); color: #fff; box-shadow: 0 8px 20px -8px rgba(11, 122, 92, .7); }
+.btn-apk:hover { background: #086149; }
+@media (prefers-color-scheme: dark) { .btn-apk { background: #4FD1A5; color: #06281F; box-shadow: none; } .btn-apk:hover { background: #7BE0BD; } }
+.apk-box {
+  margin: 28px auto 0; max-width: 640px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;
+  text-align: left; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .22); border-radius: 20px; padding: 18px 20px;
+}
+.apk-box div { flex: 1 1 280px; }
+.apk-box b { display: block; color: #fff; font-family: var(--font-title); font-size: 18px; }
+.apk-box span { display: block; color: #DEE1FF; font-size: 15px; margin-top: 2px; }
+.cta-box .btn.btn-apk-light { margin-top: 0; background: #fff; color: var(--anil); }
+.cta-box .btn.btn-apk-light:hover { background: #E0E3FF; }
