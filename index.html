@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=5">
+<link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -165,8 +165,12 @@
 <!-- ============ VIDEO DEMO + INSTALAR EL APK ============ -->
 <section id="video" aria-labelledby="t-video">
   <div class="wrap video-grid">
-    <div class="video-frame reveal">
-      <iframe src="https://www.youtube-nocookie.com/embed/Kl2Vr5G0b3k?rel=0" title="Video demo de Aruy" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-frame reveal" id="video-player" data-yt="Kl2Vr5G0b3k">
+      <button type="button" class="video-poster" aria-label="Reproducir el video demo de Aruy">
+        <img src="assets/video-portada.jpg" width="480" height="1040" loading="lazy" alt="Pantalla Nuevo servicio de la app Aruy, donde el trabajador agrega fotos de su trabajo">
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+        <span class="video-badge">Video demo · 1 min</span>
+      </button>
     </div>
     <div class="reveal">
       <span class="eyebrow">Video demo</span>
@@ -180,7 +184,7 @@
       </ol>
       <div class="video-actions">
         <a class="btn btn-apk" href="https://github.com/FrameFlow-app/Aruy-app/releases/latest/download/aruy.apk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>Descargar APK</a>
-        <a class="btn btn-ghost" href="https://youtube.com/shorts/Kl2Vr5G0b3k" target="_blank" rel="noopener">Ver en YouTube ↗</a>
+        <a class="btn btn-ghost" href="https://youtube.com/shorts/Kl2Vr5G0b3k?feature=share" target="_blank" rel="noopener">Ver en YouTube ↗</a>
       </div>
       <p class="note" style="margin-top:14px">Requiere Android 8 o superior · unos 48 MB · APK firmado por el equipo, con código abierto en <a href="https://github.com/FrameFlow-app/Aruy-app" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
@@ -402,6 +406,19 @@
     items.forEach((el) => io.observe(el));
   } else {
     items.forEach((el) => el.classList.add('in'));
+  }
+  // Video demo: se carga el reproductor de YouTube solo al tocar la portada
+  const vp = document.getElementById('video-player');
+  if (vp) {
+    vp.querySelector('.video-poster').addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube.com/embed/' + vp.dataset.yt + '?autoplay=1&rel=0&playsinline=1';
+      f.title = 'Video demo de Aruy';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      vp.replaceChildren(f);
+    });
   }
 </script>
 </body>
