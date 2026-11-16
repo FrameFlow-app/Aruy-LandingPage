@@ -405,3 +405,7 @@ figure.quote figcaption { margin-top: 10px; font: 400 14px var(--font-body); col
 .cta-box .btn.btn-tester { background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, .55); }
 .cta-box .btn.btn-tester:hover { background: rgba(255, 255, 255, .1); }
 .cta-box p.cta-small { font-size: 14px; margin-top: 18px; color: #C9CEFF; }
+
+/* Fotos del equipo */
+.avatar { overflow: hidden; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
