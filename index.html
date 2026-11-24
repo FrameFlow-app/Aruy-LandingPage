@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=7">
+<link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -27,6 +27,7 @@
         <li><a href="#problema">El problema</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#video">Video</a></li>
+        <li><a href="#web">iPhone</a></li>
         <li><a href="#faq">Preguntas</a></li>
         <li><a href="#evidencia">Evidencia</a></li>
         <li><a href="#equipo">Equipo</a></li>
@@ -55,6 +56,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
           Descargar APK
         </a>
+        <a class="btn btn-ghost" href="#web">¿Tienes iPhone?</a>
       </div>
       <p class="hero-tester">¿Eres tester de la prueba cerrada? <a href="https://play.google.com/apps/testing/ec.edu.puce.aruy" target="_blank" rel="noopener">Únete aquí primero</a>. ¿No lo eres? Descarga el APK: cualquiera puede instalarla (<a href="#video">ver cómo instalarla</a>).</p>
       <ul class="hero-trust">
@@ -192,6 +194,33 @@
   </div>
 </section>
 
+<!-- ============ VERSIÓN WEB PARA IPHONE (PWA) ============ -->
+<section class="web" id="web" aria-labelledby="t-web">
+  <div class="wrap">
+    <div class="card web-box reveal">
+      <div class="web-intro">
+        <span class="eyebrow">Versión web · iPhone</span>
+        <h2 id="t-web" style="margin-top:10px">¿Tienes iPhone? Prueba Aruy en la web.</h2>
+        <p class="video-lead">Funciona en Safari y en cualquier navegador, sin descargar nada. Usa las mismas cuentas que la app de Android.</p>
+        <div class="video-actions">
+          <a class="btn btn-primary" href="https://frameflow-app.github.io/Aruy-web/" target="_blank" rel="noopener">Abrir Aruy web<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+          <a class="btn btn-ghost" href="https://frameflow-app.github.io/Aruy-web/#/instalar" target="_blank" rel="noopener">Ver la guía de instalación dentro de la web<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+      <div class="web-steps">
+        <h3>Instálala en tu iPhone como una app</h3>
+        <ol class="install">
+          <li><b>Abre el enlace en Safari.</b> Tiene que ser Safari.</li>
+          <li><b>Toca el botón Compartir,</b> el cuadrado con una flecha hacia arriba.</li>
+          <li><b>Elige «Añadir a pantalla de inicio»</b> y toca Añadir.</li>
+          <li><b>Abre Aruy</b> desde el ícono de tu pantalla de inicio.</li>
+        </ol>
+        <p class="note" style="margin-top:14px">En Android también puede instalarse desde Chrome (menú ⋮ → «Instalar app»), pero recomendamos la app de Android.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PREGUNTAS FRECUENTES ============ -->
 <section class="faq" id="faq" aria-labelledby="t-faq">
   <div class="wrap">
@@ -203,6 +232,10 @@
       <details>
         <summary>¿Es segura?</summary>
         <p>El APK está firmado por el equipo y el código es abierto: puedes revisarlo en GitHub (<a href="https://github.com/FrameFlow-app/Aruy-app" target="_blank" rel="noopener">github.com/FrameFlow-app/Aruy-app</a>).</p>
+      </details>
+      <details>
+        <summary>¿Funciona en iPhone?</summary>
+        <p>Sí, en la web: abre <a href="#web">Aruy web</a> en Safari y añádela a tu pantalla de inicio. Usa la misma cuenta que en Android.</p>
       </details>
       <details>
         <summary>¿Cuesta algo?</summary>
@@ -423,6 +456,7 @@
           <li><a href="https://github.com/FrameFlow-app/Aruy-app" target="_blank" rel="noopener">Repositorio en GitHub</a></li>
           <li><a href="https://play.google.com/store/apps/details?id=ec.edu.puce.aruy" target="_blank" rel="noopener">Google Play</a></li>
           <li><a href="https://github.com/FrameFlow-app/Aruy-app/releases/latest/download/aruy.apk" download>Descargar APK</a></li>
+          <li><a href="https://frameflow-app.github.io/Aruy-web/" target="_blank" rel="noopener">Probar en la web (iPhone)</a></li>
         </ul>
       </div>
     </div>
