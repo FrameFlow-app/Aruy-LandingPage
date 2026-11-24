@@ -482,3 +482,13 @@ figure.quote figcaption { margin-top: 10px; font: 400 14px var(--font-body); col
   .faq-list details p { padding: 0 16px 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .faq-list details, .faq-list summary::after { transition: none; } }
+
+/* Versión web para iPhone (PWA) */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.web { padding-top: 0; }
+.web-box { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; padding: 40px; }
+.web-steps h3 { margin: 0; font-size: 20px; }
+.web-box .btn { max-width: 100%; }
+.web-box .btn-ghost { text-align: left; }
+@media (min-width: 1001px) and (max-width: 1180px) { .nav-links { gap: 20px; } }
+@media (max-width: 860px) { .web-box { grid-template-columns: 1fr; gap: 32px; padding: 24px; } }
