@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=6">
+<link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 <body>
 <div class="weave" aria-hidden="true"></div>
@@ -24,24 +24,37 @@
 <h1>Política de privacidad</h1>
 <p class="pill updated"><i></i>Última actualización: 26 de octubre de 2026</p>
 <p>Aruy es una aplicación Android del equipo FrameFlow, proyecto académico de la Pontificia Universidad Católica del Ecuador (PUCE), Quito. Esta política explica qué datos usamos y cómo cuidarlos, de acuerdo con la Ley Orgánica de Protección de Datos Personales del Ecuador.</p>
+
+<h2 id="resumen">Resumen</h2>
+<table>
+  <thead><tr><th scope="col">Pregunta</th><th scope="col">Respuesta corta</th></tr></thead>
+  <tbody>
+    <tr><td><b>¿Qué datos recoge la app?</b></td><td>Nombre, correo, contraseña cifrada, rol, celular para WhatsApp, datos del perfil de trabajo, servicios, fotos de trabajos y calificaciones (<a href="#datos">sección 2</a>).</td></tr>
+    <tr><td><b>¿Para qué?</b></td><td>Para crear tu cuenta, mostrar tu perfil y tus servicios, permitir que te contacten por WhatsApp y mostrar opiniones. No vendemos datos ni hacemos publicidad (<a href="#uso">sección 3</a>).</td></tr>
+    <tr><td><b>¿Dónde se guardan?</b></td><td>Cuenta y perfil en una base de datos PostgreSQL en Neon; fotos en Supabase Storage; favoritos, bloqueados e historial solo en tu teléfono (<a href="#donde">sección 5</a>).</td></tr>
+    <tr><td><b>¿Cuánto tiempo?</b></td><td>Mientras tu cuenta esté activa. Al eliminarla, se borran sin copias (<a href="#tiempo">sección 7</a>).</td></tr>
+    <tr><td><b>¿Cómo pido que se borren?</b></td><td>En la app: Perfil → Eliminar mi cuenta. O escribe a <a href="mailto:aruy.ec@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20Aruy">aruy.ec@gmail.com</a> con el asunto «Eliminar mi cuenta de Aruy»; lo hacemos en máximo 30 días (<a href="#eliminar-datos">sección 8</a>).</td></tr>
+  </tbody>
+</table>
+
 <h2>1. Quién es el responsable</h2>
 <p>Equipo FrameFlow (Gloria Chushig, Alisson Basantes, David Tapia y Karol Moreno). Contacto: <a href="mailto:aruy.ec@gmail.com">aruy.ec@gmail.com</a>.</p>
-<h2>2. Qué datos recogemos</h2>
+<h2 id="datos">2. Qué datos recogemos</h2>
 <ul><li><b>Cuenta:</b> nombre, correo electrónico, contraseña (se guarda cifrada, nunca en texto) y rol (contratante o prestador).</li>
 <li><b>Perfil del prestador:</b> oficio, descripción, años de experiencia, zona de cobertura, teléfono de contacto y disponibilidad.</li>
 <li><b>Contenido que tú publicas:</b> servicios, precios referenciales, fotos de tus trabajos y, si quieres, foto de perfil.</li>
 <li><b>Actividad:</b> calificaciones y comentarios, y planes Aruy Pro (en esta versión el pago es simulado y no recogemos datos de tarjetas ni de pagos).</li>
 <li><b>En tu teléfono:</b> favoritos, bloqueados, historial de contactos, reportes y vistos recientemente, guardados solo en el dispositivo.</li></ul>
 <p>No pedimos acceso a tu ubicación GPS, a tus contactos ni a tu micrófono. Para tomar fotos usamos la cámara del sistema, sin pedir el permiso de cámara.</p>
-<h2>3. Para qué los usamos</h2>
+<h2 id="uso">3. Para qué los usamos</h2>
 <p>Para crear tu cuenta, mostrar tu perfil y tus servicios a quienes los buscan, permitir que te contacten por WhatsApp y mostrar calificaciones. No vendemos tus datos ni los usamos para publicidad personalizada.</p>
 <h2>4. Fotos y análisis en el teléfono</h2>
 <p>Cuando eliges una foto, la app la analiza dentro de tu teléfono con ML Kit de Google para sugerir una categoría. Ese análisis no envía la imagen a ningún servidor de análisis. La foto que decides publicar se reduce, se convierte a WebP y se guarda en nuestro almacenamiento.</p>
-<h2>5. Con quién compartimos datos</h2>
+<h2 id="donde">5. Dónde se guardan y con quién los compartimos</h2>
 <p>Usamos proveedores que almacenan o procesan datos solo para operar Aruy: Neon (base de datos PostgreSQL), Supabase (almacenamiento de fotos), el hosting del servidor de la aplicación y Google (Google Play y ML Kit en el dispositivo). Tu teléfono y tu nombre de perfil son visibles para otros usuarios que ven tu perfil público.</p>
 <h2>6. Seguridad</h2>
 <p>Usamos HTTPS, contraseñas cifradas, sesiones con vencimiento de 8 horas guardadas cifradas en tu teléfono y control de acceso por rol. Ninguna clave secreta está dentro de la app.</p>
-<h2>7. Cuánto tiempo guardamos los datos</h2>
+<h2 id="tiempo">7. Cuánto tiempo guardamos los datos</h2>
 <p>Mientras tu cuenta esté activa y hasta que pidas eliminar tus datos.</p>
 <h2 id="eliminar-datos">8. Tus derechos y eliminación de la cuenta</h2>
 <p>Puedes acceder, corregir y eliminar tus datos. Dentro de la app, en <b>Perfil, Eliminar mi cuenta</b> (también desde «Mis datos y privacidad»), eliminas tu cuenta al instante y para siempre. Se borran tu cuenta (nombre, celular, correo y contraseña), tu perfil de prestador, tus servicios con sus fotos, las opiniones que hiciste y las que recibiste, y tu plan Aruy Pro. La app también borra lo que guardaba de tu cuenta en el teléfono (favoritos, bloqueados, reportes e historial). No conservamos copias de esos datos.</p>
@@ -53,9 +66,7 @@
 </main>
 <footer>
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/icon.svg" alt="">Aruy</a>
-    <span>Equipo FrameFlow · PUCE, Quito · 2026</span>
-    <nav aria-label="Pie de página"><a href="index.html">Inicio</a><a href="mailto:aruy.ec@gmail.com">aruy.ec@gmail.com</a></nav>
+    <p class="foot-legal">© 2026 FrameFlow · Proyecto académico estudiantil de Ingeniería de Sistemas de Información de la PUCE, asignatura Emprendimiento Tecnológico, con metodología de aprendizaje-servicio · No es un producto oficial de la PUCE · Profesor tutor: Ing. Francisco Rodríguez, MsC (<a href="mailto:frodriguez@puce.edu.ec">frodriguez@puce.edu.ec</a>) · Versión beta, uso gratuito · Código bajo <a href="https://github.com/FrameFlow-app/Aruy-app/blob/main/LICENSE" target="_blank" rel="noopener">licencia MIT</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos de uso</a> · Contacto: <a href="mailto:aruy.ec@gmail.com">aruy.ec@gmail.com</a></p>
   </div>
 </footer>
 </body>
